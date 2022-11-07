@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+body {
+    font-family: Noto Sans KR, sans-serif;
+    letter-spacing: -1.2px;
+}
+
+.slick-slide {
+    margin: 0 8px;
+}
+
+.slick-list {
+    margin: 0 -8px;
+}
+
+
+h2 {
+    font-weight: 700;
+    margin: 0;
+}
+
+span {
+    font-size: 18px;
+    color: #9C9C9C;
+    margin-top: 6px;
+}
+
+
+.wrapper {
+    width: 1194px;
+    height: 500px;
+    margin: 0 auto;
+}
+
+.card {
+    width: 378px;
+    border: 1px solid #E5E5E5;
+    border-radius: 16px;
+    margin-top: 16px;
+}
+
+
+.topimg {
+    width: 100%;
+}
+
+.cardBottom {
+    padding: 0 16px;
+}
+
+.departDate {
+ font-size: 20px;
+ font-weight: 700;
+ margin: 24px 0 0 0;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: medium;
+    margin: 6px 0 0 0;
+}
+
+
+.price {
+    display: flex;
+    align-items: baseline;
+    justify-content: end;
+    margin-right: 24px;
+}
+
+.notSalePrice {
+    display: inline-block;
+    font-size: 16px;
+    color: #BBBBBB;
+    margin: 0;
+    margin-right: 24px;
+    text-decoration:line-through;
+}
+
+.salePrice {
+    display: inline-block;
+    font-size: 28px;
+    color: #CE0202;
+    font-weight: bold;
+    margin: 16px 0 40px 0;
+}
