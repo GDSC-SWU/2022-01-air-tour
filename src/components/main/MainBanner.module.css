@@ -1,0 +1,98 @@
+.slide {
+  width: 1454px;
+  height: 653px;
+  margin: 10vh auto;
+}
+
+div {
+  transition: all 0.3s ease-out;
+}
+
+.window {
+  width: 1454px;
+  height: 653px;
+
+  overflow: hidden;
+}
+
+.flexbox {
+  display: flex;
+}
+
+.img {
+  width: 1454px;
+  height: 653px;
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  flex: none;
+  border-radius: 30px;
+}
+
+.content {
+  margin-top: 6vh;
+  margin-left: 6vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-items: flex-start;
+  z-index: 2;
+}
+
+.content * {
+  color: white;
+}
+
+.recommandTag * {
+  font-size: 20px;
+  margin-top: 1vh;
+  margin-bottom: 0;
+}
+
+.country_title {
+  margin-top: 2vh;
+  margin-bottom: 0vh;
+  font-weight: bold;
+  font-size: 60px;
+}
+
+.title_text {
+  margin-top: 0;
+  font-size: 26px;
+}
+
+.aboveContent {
+  margin-top: 7vh;
+}
+
+.above_li {
+  margin: 0;
+  display: flex;
+}
+
+.above_li * {
+  padding: 0.3vh 1vw;
+  font-size: 21px;
+}
+
+.pagination_container {
+  display: flex;
+}
+
+.pagination {
+  display: flex;
+  color: white;
+  border-radius: 2em;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 0vh 1vh;
+  font-size: 21px;
+}
+
+.pagination * {
+  margin: 0.05vh 0.15vw;
+  font-weight: lighter;
+}
+
+.position {
+  font-weight: bold;
+}
