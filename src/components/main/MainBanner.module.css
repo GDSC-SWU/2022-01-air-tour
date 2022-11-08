@@ -50,15 +50,25 @@ div {
 }
 
 .country_title {
-  margin-top: 2vh;
-  margin-bottom: 0vh;
-  font-weight: bold;
-  font-size: 60px;
+  left: 8.94%;
+  right: 65.54%;
+  top: 17.46%;
+  bottom: 3px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 58px;
+  line-height: 84px;
 }
 
 .title_text {
-  margin-top: 0;
-  font-size: 26px;
+  left: 9.01%;
+  right: 72.56%;
+  top: 3px;
+  bottom: 63.4%;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 35px;
 }
 
 .aboveContent {

@@ -61,10 +61,10 @@ function MainBanner() {
                     여행지 추천
                   </div>
                 </div>
-                <h1 className={styles.country_title}>스페인 포르투갈</h1>
-                <h3 className={styles.title_text}>
+                <div className={styles.country_title}>스페인 포르투갈</div>
+                <div className={styles.title_text}>
                   여행이 완벽히 완성되는 순간
-                </h3>
+                </div>
                 <div className={styles.aboveContent}>
                   <div className={styles.above_li}>
                     <img
@@ -103,8 +103,10 @@ function MainBanner() {
                     에어투어 단독
                   </div>
                 </div>
-                <h1 className={styles.country_title}>런던</h1>
-                <h3 className={styles.title_text}>나의 로망이 이루어지는 곳</h3>
+                <div className={styles.country_title}>런던</div>
+                <div className={styles.title_text}>
+                  나의 로망이 이루어지는 곳
+                </div>
                 <div className={styles.aboveContent}>
                   <div className={styles.above_li}>
                     <span>COVID-19 입국 제한 해제!</span>
@@ -126,8 +128,8 @@ function MainBanner() {
                     SALE
                   </div>
                 </div>
-                <h1 className={styles.country_title}>일본</h1>
-                <h3 className={styles.title_text}>에어투어 단독 특가</h3>
+                <div className={styles.country_title}>일본</div>
+                <div className={styles.title_text}>에어투어 단독 특가</div>
                 <div className={styles.aboveContent}>
                   <div className={styles.above_li}>
                     <img
