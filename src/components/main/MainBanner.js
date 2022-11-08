@@ -148,37 +148,39 @@ function MainBanner() {
               <div className={styles.img_cover}></div>
             </div>
           </div>
-        </div>
-        <div className={styles.pagination_container}>
-          <div className={styles.pagination}>
-            <div
-              className={styles.btn}
-              onClick={() => {
-                moveSlide(-1);
-              }}
-            >
-              <img
-                src={leftArrow}
-                alt="previous slide"
-                width={28}
-                height={28}
-              ></img>
-            </div>
-            <span className={styles.position}>{current + 1}</span>
-            <span className={styles.pos_text}>/</span>
-            <span className={styles.pos_text}>3</span>
-            <div
-              className={styles.btn}
-              onClick={() => {
-                moveSlide(1);
-              }}
-            >
-              <img
-                src={rightArrow}
-                alt="next slide"
-                width={28}
-                height={28}
-              ></img>
+          <div className={styles.pagination_container}>
+            <div className={styles.pagination}>
+              <div
+                className={styles.btn}
+                onClick={() => {
+                  moveSlide(-1);
+                }}
+              >
+                <img
+                  src={leftArrow}
+                  alt="previous slide"
+                  width={28}
+                  height={28}
+                  className={styles.btnLeft}
+                ></img>
+              </div>
+              <span className={styles.position}>{current + 1}</span>
+              <span className={styles.pos_text1}>/</span>
+              <span className={styles.pos_text}>3</span>
+              <div
+                className={styles.btn}
+                onClick={() => {
+                  moveSlide(1);
+                }}
+              >
+                <img
+                  src={rightArrow}
+                  alt="next slide"
+                  width={28}
+                  height={28}
+                  className={styles.btnRight}
+                ></img>
+              </div>
             </div>
           </div>
         </div>
