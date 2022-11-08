@@ -10,10 +10,13 @@ import Card3 from '../../images/card3.png'
 import Card4 from '../../images/card4.png'
 import Card5 from '../../images/card5.png'
 
+
 function App() {
+  
+  
   // React Slick carousel responsive settings
     var settings = {
-      dots: true,
+      dots: false,
       infinite: false,
       speed: 500,
       slidesToShow: 3,  // 한 화면에 3개의 카드 보여줌
@@ -54,6 +57,7 @@ function App() {
     <span>여행 마니아들이 자주 찾아요</span>
     <Slider {...settings}>
     <div className={styles.card}>
+    <div className={styles.cardBorder}>
         <div className={styles.cardTop}>
           <img className={styles.topimg} src={Card1} alt="img1" /> 
         </div>
@@ -66,7 +70,9 @@ function App() {
         </div>
         </div>
       </div>
+      </div>
       <div className={styles.card}>
+      <div className={styles.cardBorder}>
         <div className={styles.cardTop}>
           <img className={styles.topimg} src={Card2} alt="img1" /> 
         </div>
@@ -79,7 +85,9 @@ function App() {
         </div>
         </div>
       </div>
+      </div>
       <div className={styles.card}>
+      <div className={styles.cardBorder}>
         <div className={styles.cardTop}>
           <img className={styles.topimg} src={Card3} alt="img1" /> 
         </div>
@@ -92,7 +100,9 @@ function App() {
           </div>
         </div>
       </div>
+      </div>
       <div className={styles.card}>
+      <div className={styles.cardBorder}>
         <div className={styles.cardTop}>
           <img className={styles.topimg} src={Card4} alt="img1" /> 
         </div>
@@ -105,7 +115,9 @@ function App() {
           </div>
         </div>
       </div>
+      </div>
       <div className={styles.card}>
+      <div className={styles.cardBorder}>
         <div className={styles.cardTop}>
           <img className={styles.topimg} src={Card5} alt="img1" /> 
         </div>
@@ -117,6 +129,7 @@ function App() {
             <p className={styles.salePrice}>92,000원</p>
           </div>
         </div>
+      </div>
       </div>
     </Slider>
   </Wrapper>

@@ -13,6 +13,10 @@ body {
     margin: 0 -8px;
 }
 
+.slick-prev:before, .slick-next:before {
+    content: '→';
+    color: black;
+}
 
 h2 {
     font-weight: 700;
@@ -34,11 +38,19 @@ span {
 
 .card {
     width: 378px;
-    border: 1px solid #E5E5E5;
     border-radius: 16px;
     margin-top: 16px;
+    
+    /* 카드 여백 추가 */
+    padding: 8px;
+    box-sizing  : border-box; 
 }
 
+/* 카드 border 추가 */
+.cardBorder {
+    border: 1px solid #E5E5E5;
+    border-radius: 16px;
+}
 
 .topimg {
     width: 100%;
