@@ -1,0 +1,109 @@
+@media (min-width:550px){
+    .grid {--breakpoint-grid_columns: 2;}
+}
+
+@media (min-width:950px){
+    .grid {--breakpoint-grid_columns: 3;}
+}
+
+@media (min-width:1128px){
+    .grid {--breakpoint-grid_columns: 4;}
+}
+
+@media (min-width:1640px){
+    .grid {--breakpoint-grid_columns: 5;}
+}
+
+@media (min-width:1880px){
+    .grid {--breakpoint-grid_columns: 6;}
+}
+
+@media (min-width:744px){
+    .grid {--breakpoint-grid_auto-rows: minmax(0,1fr);}
+}
+
+.grid {
+    --breakpoint-grid_column-gap: 24px;
+    --breakpoint-grid_row-gap: 40px;
+
+    display: grid;
+    grid-auto-flow: row dense;
+    grid-auto-rows: var(--breakpoint-grid_auto-rows, minmax(min-content,max-content) );
+    grid-gap: var(--breakpoint-grid_row-gap,0) var(--breakpoint-grid_column-gap,0);
+    grid-template-columns: repeat(var(--breakpoint-grid_columns), 1fr);
+}
+
+.package {
+    display: flex;
+    flex-direction: column;
+}
+
+.packageImage {
+    display: flex; /* match height to child(img) width */
+    border-radius: 12px;
+    margin-bottom: 12px;
+    overflow: hidden;
+}
+.packageImage > img {
+    object-fit: cover;
+}
+
+.packageInfo {
+    /* --card-content-grid_gap: 2px 8px;
+    --h-x-sf-jw: 4px;
+    
+    display: grid;
+    grid-gap: var(--card-content-grid_gap,var(--h-x-sf-jw));
+    gap: var(--card-content-grid_gap,var(--h-x-sf-jw));
+    grid-template-columns: var(minmax(0,1fr) -webkit-max-content);
+    grid-template-columns: var(minmax(0,1fr) max-content);
+    grid-template-rows: unset; */
+
+    display: flex;
+    width: 100%;
+}
+
+@import url('https://fonts.cdnfonts.com/css/circular-std');
+
+.packageInfo > div {
+    font-size: 15px;
+    line-height: 19px;
+}
+
+.infoContainer {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.title {
+    font-family: 'Circular Std', sans-serif;
+    font-weight: bold;
+    color: #222222;
+}
+.distance, .date {
+    font-family: 'Circular Std', sans-serif;
+    font-weight: 450;
+    color: #717171;
+}
+
+.price {
+    font-family: 'Circular Std', sans-serif;
+    margin-top: 6px;
+}
+
+.rate {
+    font-family: 'Circular Std', sans-serif;
+    font-weight: 450;
+    display: flex;
+    flex: 0 0;
+    margin-right: 0;
+    color: #222222;
+}
+
+.rate > svg {
+    fill: #222222;
+    height: 19px;
+    margin: 2px 4px auto auto;
+}
