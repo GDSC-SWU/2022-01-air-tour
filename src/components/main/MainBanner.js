@@ -1,8 +1,8 @@
 import { useState, useEffect, useRef } from "react";
 import styles from "./MainBanner.module.css";
-import slide0 from "../../images/img/slide0.jpg";
-import slide1 from "../../images/img/slide1.jpg";
-import slide2 from "../../images/img/slide2.jpg";
+import slide0 from "../../images/img/main_banner/slide0.png";
+import slide1 from "../../images/img/main_banner/slide1.png";
+import slide2 from "../../images/img/main_banner/slide2.png";
 import airplaneIcon from "../../images/icon/airplane.svg";
 import handIcon from "../../images/icon/hand.svg";
 import leftArrow from "../../images/icon/left.svg";
@@ -22,7 +22,7 @@ function MainBanner() {
   });
   const imgSize = useRef(images.current.length);
 
-  // 슬라이드 이동 func
+  // 슬라이드 이동
   const moveSlide = (i) => {
     let nextIndex = current + i;
 
@@ -33,10 +33,36 @@ function MainBanner() {
     setCurrent(nextIndex);
   };
 
-  //
+  // 캐러셀 슬라이딩: margin-left 설정
   useEffect(() => {
     setStyle({ marginLeft: `-${current}00%` });
   }, [current]);
+
+  // setInterval 사용 시 dependency warning 방지 위한 커스텀 interval func.
+  const useInterval = (callback, delay) => {
+    const savedCallback = useRef();
+
+    // Remember the latest callback
+    useEffect(() => {
+      savedCallback.current = callback;
+    }, [callback]);
+
+    // Set up the interval
+    useEffect(() => {
+      function tick() {
+        savedCallback.current();
+      }
+      if (delay !== null) {
+        let id = setInterval(tick, delay);
+        return () => clearInterval(id);
+      }
+    }, [delay]);
+  };
+
+  // 캐러셀 자동 슬라이드 (3500 ms)
+  useInterval(() => {
+    moveSlide(1);
+  }, 3500);
 
   return (
     <div className={styles.container}>
@@ -49,6 +75,7 @@ function MainBanner() {
                 backgroundImage: `${images.current[0].src}`,
               }}
             >
+              <div className={styles.img_cover}></div>
               <div className={styles.content}>
                 <div className={styles.recommandTag}>
                   <div
@@ -61,12 +88,12 @@ function MainBanner() {
                     여행지 추천
                   </div>
                 </div>
-                <div className={styles.country_title}>스페인 포르투갈</div>
+                <div className={styles.title}>스페인 포르투갈</div>
                 <div className={styles.title_text}>
                   여행이 완벽히 완성되는 순간
                 </div>
-                <div className={styles.aboveContent}>
-                  <div className={styles.above_li}>
+                <div className={styles.text}>
+                  <div className={styles.text_li}>
                     <img
                       src={airplaneIcon}
                       alt="airplane icon"
@@ -75,7 +102,7 @@ function MainBanner() {
                     ></img>
                     <span>아시아나 항공 직항</span>
                   </div>
-                  <div className={styles.above_li}>
+                  <div className={styles.text_li}>
                     <img
                       src={handIcon}
                       alt="hand icon"
@@ -92,6 +119,7 @@ function MainBanner() {
               className={styles.img}
               style={{ backgroundImage: `${images.current[1].src}` }}
             >
+              <div className={styles.img_cover2}></div>
               <div className={styles.content}>
                 <div className={styles.recommandTag}>
                   <div
@@ -103,15 +131,15 @@ function MainBanner() {
                     에어투어 단독
                   </div>
                 </div>
-                <div className={styles.country_title}>런던</div>
+                <div className={styles.title}>런던</div>
                 <div className={styles.title_text}>
                   나의 로망이 이루어지는 곳
                 </div>
-                <div className={styles.aboveContent}>
-                  <div className={styles.above_li}>
+                <div className={styles.text}>
+                  <div className={`${styles.text_li} ${styles.li_no_icon}`}>
                     <span>COVID-19 입국 제한 해제!</span>
                   </div>
-                  <div className={styles.above_li}>
+                  <div className={`${styles.text_li} ${styles.li_no_icon}`}>
                     <span>에어투어에서 준비한 투어를 만나보세요</span>
                   </div>
                 </div>
@@ -122,16 +150,17 @@ function MainBanner() {
               className={styles.img}
               style={{ backgroundImage: `${images.current[2].src}` }}
             >
+              <div className={styles.img_cover2}></div>
               <div className={styles.content}>
-                <div className={styles.ecommandTag}>
+                <div className={styles.recommandTag}>
                   <div style={{ backgroundColor: "red", padding: "2px 14px" }}>
                     SALE
                   </div>
                 </div>
-                <div className={styles.country_title}>일본</div>
+                <div className={styles.title}>일본</div>
                 <div className={styles.title_text}>에어투어 단독 특가</div>
-                <div className={styles.aboveContent}>
-                  <div className={styles.above_li}>
+                <div className={styles.text}>
+                  <div className={styles.text_li}>
                     <img
                       src={airplaneIcon}
                       alt="airplane icon"
@@ -140,7 +169,7 @@ function MainBanner() {
                     ></img>
                     <span>아시아나 항공 직항</span>
                   </div>
-                  <div className={styles.above_li}>
+                  <div className={`${styles.text_li} ${styles.li_no_icon}`}>
                     <span>인기 있는 곳만 모아서 압축한 일본여행 패키지</span>
                   </div>
                 </div>
@@ -159,14 +188,14 @@ function MainBanner() {
                 <img
                   src={leftArrow}
                   alt="previous slide"
-                  width={28}
-                  height={28}
+                  width={9}
+                  height={18}
                   className={styles.btnLeft}
                 ></img>
               </div>
-              <span className={styles.position}>{current + 1}</span>
-              <span className={styles.pos_text1}>/</span>
-              <span className={styles.pos_text}>3</span>
+              <span className={styles.pos_current}>{current + 1}</span>
+              <span className={styles.pos_slash}>/</span>
+              <span className={styles.pos_size}>{imgSize.current}</span>
               <div
                 className={styles.btn}
                 onClick={() => {
@@ -176,8 +205,8 @@ function MainBanner() {
                 <img
                   src={rightArrow}
                   alt="next slide"
-                  width={28}
-                  height={28}
+                  width={9}
+                  height={18}
                   className={styles.btnRight}
                 ></img>
               </div>
