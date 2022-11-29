@@ -1,0 +1,313 @@
+* {
+    letter-spacing: -0.4px;
+}
+
+.subcontainer {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    height: 80px;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    margin-top: 16px;
+}
+
+.logo {
+    outline: none;
+    align-items: center;
+    display: inline-flex;
+    width: 118px;
+    height: 80px;
+    position: relative;
+    vertical-align: middle;
+    z-index: 1;
+}
+
+.navMenu {
+    flex: 0 1 auto;
+    min-width: 380px;
+    padding: 13px 8px;
+    background-color: #fff;
+    border: 1px solid #DDDDDD;
+    border-radius: 40px;
+    box-shadow: 0 1px 2px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 5%);
+    transition: box-shadow 0.2s ease;
+}
+
+.menuList {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+
+.placeMenu, .dateMenu, .guestMenu,.checkin, .checkout, .traveling {
+    /*버튼 CSS 초기화*/
+    background: inherit ; border:none; box-shadow:none; border-radius:0; padding:0; overflow:visible; cursor:pointer;
+    
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.placeMenu {
+    margin-left: 8px;
+    padding: 0 0 0 16px;
+}
+
+.popUpActive {
+    opacity: 1;
+    visibility: visible;
+    z-index: 9;
+    display: block;
+    position: absolute;
+    top: 80px;
+    left: 40px;
+    width: 240px;
+    border-radius: 16px;
+    box-shadow: 0 1px 2px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 5%);
+}
+
+
+.popUpInActive {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    border: 1px solid rgb(241, 241, 241);
+    width: 100%;
+    height: 96px;
+    box-shadow: 0 1px 2px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 5%);
+}
+
+
+.guestMenu {
+    margin-right: 8px;
+    line-height: 32px;
+    font-weight: 400;
+    color: grey;
+}
+
+.spaceBar {
+    flex: 0 0 1px;
+    height: 24px;
+    width: 1px;
+    background-color: #dddddd;
+}
+
+.searchBtn {
+    display: block;
+    fill: none;
+    height: 32px;
+    width: 32px;
+    stroke: currentcolor;
+    stroke-width: 5.33333;
+    overflow: visible;
+    float: right;
+    background-color: #FF385C;
+    margin-left: 16px;
+    border-radius: 100%;
+}
+
+.searchBtn > img {
+    filter: invert(86%) sepia(58%) saturate(0%) hue-rotate(50deg) brightness(106%) contrast(101%);
+    width: 60%;
+    margin: 5px auto;
+}
+
+.myBtn {
+    background: transparent;
+    cursor: pointer;
+    margin: 0;
+    text-align: inherit;
+    background-color: #fff;
+    border: 1px solid #DDDDDD;
+    border-radius: 21px;
+    transition: box-shadow 0.2s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 82px;
+    height: 42px;
+    margin-right: 40px;
+}
+
+.myHamBtn .ham {
+    filter: invert(12%) sepia(94%) saturate(19%) hue-rotate(327deg) brightness(96%) contrast(101%);
+    width: 60px;
+    margin-right: -32px;
+    margin-left: -4px;
+    margin-top: 2px;
+}
+
+.myPageBtn .user {
+    filter: invert(61%) sepia(11%) saturate(0%) hue-rotate(129deg) brightness(94%) contrast(89%);
+    width: 32px;
+    float: right;
+    margin-right: 8px;
+}
+
+
+.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 99;
+    display: block;
+    position: absolute;
+    top: 80px;
+    right: 40px;
+    background-color: #fff;
+    width: 240px;
+    border-radius: 16px;
+    box-shadow: 0 1px 2px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 5%);
+}
+
+.inactive {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 80px;
+    right: 40px;
+    background-color: #fff;
+    width: 240px;
+    border-radius: 16px;
+    box-shadow: 0 1px 2px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 5%);
+
+}
+
+.active > ul {
+    list-style: none;
+    list-style-type: none;
+    font-size: 1.5rem;
+    margin-left: 0;
+    padding: 0;
+}
+
+.inactive > ul {
+    list-style: none;
+    list-style-type: none;
+    font-size: 1.5rem;
+    margin-left: 0;
+    padding: 0;
+}
+
+.active li {
+    padding: 8px;
+    margin-left: 16px;
+}
+
+.inactive li {
+    padding: 8px;
+    margin-left: 16px;
+}
+
+.active hr {
+    background: rgba(128, 128, 128, 0.35);
+    height: 1px;
+    border: 0;
+}
+
+.inactive hr {
+    background: rgba(128, 128, 128, 0.35);
+    height: 1px;
+    border: 0; 
+}
+
+.card {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 12px auto 0 auto;
+    width: 100%;
+    position: relative;
+    background-color: red;
+}
+
+.subMenuList {
+    margin: 0;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    width: 848px;
+    height: 64px;
+    position: absolute;
+    top: 0px;
+    left: auto;
+    border-radius: 100px;
+    box-sizing: border-box;
+    background-color: #EBEBEB;
+}
+
+.subMenuList > .placeMenu {
+    margin: 0;
+    box-sizing: border-box;
+    padding-top: 12px;
+    padding-left: 32px;
+    font-size: 12px;
+    font-weight: bold;
+    background-color:rgb(255, 255, 255);
+    width: 320px;
+    height: 100%;
+    border-radius: 100px;
+    border: 1px solid rgb(241, 241, 241);
+}
+
+.subTitle {
+    color: rgb(129, 129, 129);
+    font-size: 14px;
+    display: block;
+    margin-top: 0;
+}
+
+.checkin, .checkout {
+    width: 130px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+.traveling {
+    width: 262px;
+    height: 62px;
+    margin: 0;
+    box-sizing: border-box;
+    padding-left: 32px;
+    font-size: 16px;
+    font-weight: normal;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 100px;
+    border-radius: 100px;
+    color: rgb(129, 129, 129);
+}
+
+.searchBtn2 {
+    display: flex;
+    fill: none;
+    height: 48px;
+    width: 88px;
+    stroke: currentcolor;
+    stroke-width: 5.33333;
+    overflow: visible;
+    float: right;
+    background-color: #FF385C;
+    margin-left: 16px;
+    border-radius: 30px;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.searchBtn2 > img {
+    display: inline-block;
+    filter: invert(86%) sepia(58%) saturate(0%) hue-rotate(50deg) brightness(106%) contrast(101%);
+    width: 30%;
+    margin: 5px auto;
+}
+
+.subTitle2{
+    color: white;
+    font-size: 1.7rem;
+    padding-right: 12px;
+    padding-bottom: 8px;
+}
