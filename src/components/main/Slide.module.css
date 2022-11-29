@@ -1,0 +1,137 @@
+.img {
+  position: relative;
+  z-index: -2;
+  width: 1454px;
+  height: 653px;
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  flex: none;
+  border-radius: 16px;
+}
+
+.img_cover {
+  position: absolute;
+  z-index: -1;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.28) 0%,
+    rgba(0, 0, 0, 0) 89.54%
+  );
+  border-radius: 16px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.img_cover2 {
+  position: absolute;
+  z-index: -1;
+  background: linear-gradient(
+    187.39deg,
+    rgba(0, 0, 0, 0.6) 58.08%,
+    rgba(0, 0, 0, 0) 90.47%
+  );
+  border-radius: 16px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.content {
+  margin-left: 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-items: flex-start;
+}
+
+.content * {
+  color: white;
+}
+
+.recommandTag {
+  margin-top: 6.3rem;
+}
+
+.recommandTag * {
+  margin: 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 29px;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.04em;
+}
+
+.tag_0 {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 2px 14px;
+}
+
+.tag_1 {
+  background-color: #000000;
+  padding: 2px 14px;
+}
+
+.tag_2 {
+  background-color: red;
+  padding: 2px 14px;
+}
+
+.title {
+  left: 8.94%;
+  right: 65.54%;
+  top: 17.46%;
+  bottom: 3px;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.04em;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 58px;
+  line-height: 84px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.title_text {
+  margin: 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 35px;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.04em;
+}
+
+.text {
+  margin-top: 5.8rem;
+}
+
+.text_li {
+  margin: 0;
+  display: flex;
+}
+
+.text_li * {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 29px;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.04em;
+}
+
+.text_li > span {
+  margin-left: 1rem;
+}
+
+.li_no_icon > span {
+  margin-left: 0;
+}
