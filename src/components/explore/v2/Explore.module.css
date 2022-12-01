@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fadein {
+  animation: fadein 1.5s;
+}
+
+.container {
+  display: flex;
+}
+
+.gridbox {
+  display: grid;
+  gap: 4rem 2.4rem;
+  grid-template-columns: repeat(4, 305px);
+  margin: 0 auto;
+  margin-top: 19.4rem;
+  margin-bottom: 4rem;
+}

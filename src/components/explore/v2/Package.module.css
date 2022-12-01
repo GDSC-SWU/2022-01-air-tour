@@ -1,0 +1,71 @@
+.package_container {
+  width: 305px;
+}
+
+.img_container {
+  height: 290px;
+  width: 305px;
+  border-radius: 1.2rem;
+  margin-bottom: 1.2rem;
+  background-color: #f3f3f3;
+}
+
+.img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  vertical-align: bottom;
+  border-radius: 1.2rem;
+}
+
+.info_container {
+  width: 305px;
+  display: grid;
+  gap: 2px 8px;
+  grid-template-columns: minmax(0, 1fr) max-content;
+}
+
+.info_container * {
+  font-size: 15px;
+}
+
+.info_city {
+  overflow: clip;
+  text-overflow: ellipsis;
+  font-weight: 600;
+}
+
+.info_etc {
+  overflow: clip;
+  text-overflow: ellipsis;
+  grid-column: 1 / -1;
+  color: #717171;
+}
+
+.info_sche {
+  overflow: clip;
+  text-overflow: ellipsis;
+  grid-column: 1 / -1;
+  color: #717171;
+}
+
+.info_price {
+  margin-top: 0.6rem;
+  line-height: 19px;
+  grid-column: 1 / -1;
+}
+
+.info_price_price {
+  font-weight: 600;
+}
+
+.info_star {
+  display: flex;
+  grid-column: -2 / -1;
+  grid-row: 1;
+  justify-self: end;
+}
+
+.info_star * {
+  line-height: 19px;
+}

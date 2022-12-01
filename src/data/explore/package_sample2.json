@@ -1,0 +1,44 @@
+{
+  "data": [
+    {
+      "city": "성산읍, 서귀포시, 한국",
+      "etc": "468km 거리",
+      "schedule": "12월 3일 ~ 8일",
+      "price": 353765,
+      "score": 4.86,
+      "images": ["1_1.png", "1_2.png", "1_3.png", "1_4.png", "1_5.png"]
+    },
+    {
+      "city": "케이프타운, 남아프리카",
+      "etc": "13,726km 거리",
+      "schedule": "2월 28일 ~ 3월 7일",
+      "price": 818250,
+      "score": 4.34,
+      "images": ["2_1.png", "2_2.png", "2_3.png", "2_4.png", "2_5.png"]
+    },
+    {
+      "city": "Jangam-myeon, Buyeo, 한국",
+      "etc": "468km 거리",
+      "schedule": "12월 11일 ~ 16일",
+      "price": 239647,
+      "score": 4.67,
+      "images": ["3_1.png", "3_2.png", "3_3.png", "3_4.png", "3_5.png"]
+    },
+    {
+      "city": "Kamogawa, 일본",
+      "etc": "1,202km 거리",
+      "schedule": "11월 13일 ~ 18일",
+      "price": 148948,
+      "score": 4.53,
+      "images": ["4_1.png", "4_2.png", "4_3.png", "4_4.png", "4_5.png"]
+    },
+    {
+      "city": "Athina, 그리스",
+      "etc": "8,518km 거리",
+      "schedule": "12월 19일 ~ 24일",
+      "price": 214627,
+      "score": 4.27,
+      "images": ["5_1.png", "5_2.png", "5_3.png", "5_4.png", "5_5.png"]
+    }
+  ]
+}
