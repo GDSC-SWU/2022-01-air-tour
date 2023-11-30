@@ -1,10 +1,15 @@
 import React from 'react';
-import Wrapper from '../components/common/Wrapper';
+import MainBanner from '../components/main/MainBanner';
+import Ticket from '../components/main/Ticket';
 
 function MainPage() {
     return (
-        <Wrapper>
-        </Wrapper>
+        <>
+        <MainBanner />
+        <div style={{width: "100px", height: "800px"}} />
+        <Ticket />
+        <div style={{width: "100px", height: "500px"}} />
+        </>
     );
 }
 

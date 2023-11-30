@@ -1,0 +1,173 @@
+.title {
+    font-weight: 700;
+    font-size: 3.2rem;
+    line-height: 4.6rem;
+    letter-spacing: -0.04em;
+    margin-bottom: 0.9rem;
+    transition: all 0.4s ease-out;
+
+    /* style before scroll event triggered */
+    opacity: 0.0;
+    transform: translateY(50px);
+}
+
+.subTitle {
+    font-weight: 400;
+    font-size: 2.4rem;
+    line-height: 3.5rem;
+    letter-spacing: -0.04em;
+    color: #9C9C9C;
+    margin-bottom: 5.5rem;
+    transition: all 0.4s ease-out;
+
+    /* style before scroll event triggered */
+    opacity: 0.0;
+    transform: translateY(50px);
+}
+
+.arrowContainer {
+    display: flex;
+    transition: all 0.4s ease-out;
+
+    /* style before scroll event triggered */
+    opacity: 0.0;
+    transform: translateY(50px);
+}
+
+.leftArrowButton {
+    display: flex;
+    width: 7.0rem;
+    height: 5.0rem;
+    margin: 0 4.8rem auto auto;
+    cursor: pointer;
+}
+.leftArrowButton > svg {
+    margin: auto;
+}
+.rightArrowButton {
+    display: flex;
+    width: 7.0rem;
+    height: 5.0rem;
+    margin: 0 2.35rem auto auto;
+    cursor: pointer;
+}
+.rightArrowButton > svg {
+    margin: auto;
+}
+
+
+/* TicketCarousel ----------------------------------- */
+.carouselContainer {
+    display: flex;
+    width: 1194px;
+    gap: 3.0rem;
+    /* ticket box-shadow 잘리므로 wrapper에 감싸서 overflow: hidden 사용 금지 */
+    padding-left: calc((100% - 1194px) / 2); /* 100vw: 스크롤바 너비 포함 / 100%: 스크롤바 너비 제외 */
+    overflow:hidden;
+    transition: all 0.4s ease-out;
+
+    /* style before scroll event triggered */
+    opacity: 0.0;
+    transform: translateY(50px);
+}
+
+.ticketBox {
+    position: relative;
+    width: 50.8rem;
+    height: 33.3rem;
+    box-shadow: 0px 0px 0px 1px #d3D3D3 inset, 0px 0px 40px 4px rgba(0, 0, 0, 0.04);
+    border-radius: 16px;
+    border: 1px solid #D3D3D3 inset;
+    background-color: transparent;
+    overflow: hidden;
+    flex-shrink: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.ticketHoleLeft, .ticketHoleRight {
+    position: absolute;
+    top: calc(11.6rem - 1.85rem);
+    width: 3.2rem;
+    height: 3.7rem;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid #D3D3D3;
+    box-shadow: 0px 0px 30px 1px rgba(0, 0, 0, 0.04) inset;
+}
+.ticketHoleLeft {
+    left: calc(-1.6rem - 0.1rem);
+}
+.ticketHoleRight {
+    right: calc(-1.6rem - 0.1rem);
+}
+
+.ticketTop {
+    display: flex;
+    height: 11.6rem;
+    padding: 28px 48px;
+    box-sizing: border-box; /* prevent padding from changing height */
+
+    /* background image */
+    background-position: center;
+    object-fit: cover;
+}
+
+.ticketTopFrom {
+    margin: auto auto auto 0;
+}
+.ticketTopTo {
+    margin: auto 2.4rem auto auto;
+}
+
+.ticketTopTitle {
+    font-size: 1.6rem;
+    line-height: 2.3rem;
+    letter-spacing: -0.04em;
+    color: #A7A7A7;
+    margin-bottom: 0.2rem;
+}
+.ticketTopContent {
+    font-size: 2.4rem;
+    line-height: 3.5rem;
+    letter-spacing: -0.04em;
+}
+
+.ticketBottom {
+    display: flex;
+    flex-direction: column;
+    height: calc(33.3rem - 11.6rem);
+    padding: 30px 52px 49px 48px;
+    box-sizing: border-box; /* prevent padding from changing height */
+
+    /* custom border */
+    background-image: linear-gradient(to right, #D3D3D3 65%, rgba(255,255,255,0) 0%);
+    background-position: top; 
+    background-size: 12px 1px; /* 점선 간격 */
+    background-repeat: repeat-x;
+}
+
+.ticketBottomFrom {
+    flex-grow: 1;
+}
+
+.ticketBottomTitle {
+    font-size: 1.6rem;
+    line-height: 2.3rem;
+    letter-spacing: -0.04em;
+    color: #A7A7A7;
+    margin-bottom: 0.5rem;
+}
+.ticketBottomContent {
+    font-weight: 500;
+    font-size: 2.0rem;
+    line-height: 2.9rem;
+    letter-spacing: -0.04em;
+}
+
+.ticketBottomPrice {
+    font-size: 4.0rem;
+    line-height: 5.8rem;
+    letter-spacing: -0.04em;
+    margin: auto 0 0 auto;
+}
+
